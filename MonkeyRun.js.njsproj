@@ -57,7 +57,7 @@
     <Compile Include="gulpfile.js" />
     <Compile Include="src\js\core.js" />
     <Compile Include="src\js\geo.js" />
-    <Compile Include="src\js\location.js" />
+    <Compile Include="src\js\others.js" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\gulp-concat\index.d.ts" />
