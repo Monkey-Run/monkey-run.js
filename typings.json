@@ -1,0 +1,9 @@
+{
+  "globalDependencies": {
+    "gulp": "registry:dt/gulp#3.8.0+20160724062653",
+    "gulp-concat": "registry:dt/gulp-concat#0.0.0+20160316155526",
+    "gulp-rename": "registry:dt/gulp-rename#0.0.0+20160316155526",
+    "gulp-uglify": "registry:dt/gulp-uglify#0.0.0+20160316155526",
+    "node": "registry:dt/node#6.0.0+20160728152422"
+  }
+}

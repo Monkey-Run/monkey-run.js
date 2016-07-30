@@ -1,0 +1,26 @@
+{
+    "name": "monkey-run",
+    "description": "A useful front-end framework powered by Monkey Run.",
+    "main": "dist/js/monkey-run.js",
+    "keywords": [
+        "js",
+        "front-end",
+        "framework",
+        "web",
+        "monkeyrun",
+        "monkey-run"
+    ],
+    "license": "MIT",
+    "homepage": "http://monkeyrun.net/",
+    "ignore": [
+        ".*",
+        "*.md",
+        "*.njsproj",
+        "src",
+        "typings",
+        "gulpfile.js"
+    ],
+    "dependencies": {
+        "jquery": "1.9.1 - 3"
+    }
+}
