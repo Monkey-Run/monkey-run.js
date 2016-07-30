@@ -52,9 +52,29 @@
               
                 
                 <li><a
-                  href='#location'
+                  href='#appendparams'
+                  class="">
+                  appendParams
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mvcjump'
+                  class="">
+                  mvcJump
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#storage'
                   class=" toggle-sibling">
-                  location
+                  storage
                   <span class='icon'>▸</span>
                 </a>
                 
@@ -64,15 +84,21 @@
                     <li class='h5'><span>Static members</span></li>
                     
                       <li><a
-                        href='#location.appendParams'
+                        href='#storage.get'
                         class='regular pre-open'>
-                        .appendParams
+                        .get
                       </a></li>
                     
                       <li><a
-                        href='#location.mvcJump'
+                        href='#storage.set'
                         class='regular pre-open'>
-                        .mvcJump
+                        .set
+                      </a></li>
+                    
+                      <li><a
+                        href='#storage.remove'
+                        class='regular pre-open'>
+                        .remove
                       </a></li>
                     
                     </ul>
@@ -101,7 +127,7 @@
       geo
     </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/96a3a1e1bab37ebc15e7f47e36be82bb6e267c12/src/js/geo.js#L7-L24'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/8399825eb1b11cdedb5d2aafce151775e4c3a903/src/js/geo.js#L7-L24'>
       <span>src/js/geo.js</span>
       </a>
     
@@ -241,54 +267,15 @@
 
   
   <div class='clearfix'>
-    <h3 class='fl m0' id='location'>
-      location
+    <h3 class='fl m0' id='appendparams'>
+      appendParams
     </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/96a3a1e1bab37ebc15e7f47e36be82bb6e267c12/src/js/location.js#L7-L51'>
-      <span>src/js/location.js</span>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/8399825eb1b11cdedb5d2aafce151775e4c3a903/src/js/others.js#L10-L35'>
+      <span>src/js/others.js</span>
       </a>
     
   </div>
-  
-
-  <p>Functions for Window.location</p>
-
-
-  <div class='pre p1 fill-light mt0'>location</div>
-
-  
-
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Static Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='location.appendParams'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>appendParams(url, params)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
   
 
   <p>Append params to an url</p>
@@ -350,19 +337,22 @@
   
 </section>
 
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='location.mvcJump'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>mvcJump(controller, action, params)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
 
+  
+  <div class='clearfix'>
+    <h3 class='fl m0' id='mvcjump'>
+      mvcJump
+    </h3>
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/8399825eb1b11cdedb5d2aafce151775e4c3a903/src/js/others.js#L43-L45'>
+      <span>src/js/others.js</span>
+      </a>
+    
+  </div>
   
 
   <p>Jump to a page using .net mvc</p>
@@ -401,6 +391,246 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>&gt;)</code> params to append, each param is an object, eg: {key:&#x27;name&#x27;, value:&#x27;Monkey&#x27;}
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    <h3 class='fl m0' id='storage'>
+      storage
+    </h3>
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/8399825eb1b11cdedb5d2aafce151775e4c3a903/src/js/others.js#L50-L94'>
+      <span>src/js/others.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Storage data using localStorage</p>
+
+
+  <div class='pre p1 fill-light mt0'>storage</div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='storage.get'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get(key, needParse)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get data</p>
+
+
+  <div class='pre p1 fill-light mt0'>get(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, needParse: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code> key of the data
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>needParse</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code> the result will be parsed if this is set true
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        result
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='storage.set'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>set(key, value)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Set data</p>
+
+
+  <div class='pre p1 fill-light mt0'>set(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code> key of the data
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code> value of the data
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='storage.remove'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>remove(key)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Remove data</p>
+
+
+  <div class='pre p1 fill-light mt0'>remove(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code> key of the data
 
           </div>
           
