@@ -3,13 +3,9 @@
 
 A useful front-end framework powered by Monkey Run.
 
-Functions
+Documents
 ------------------------------------------------------
 
-#### location
+[Markdown Version](https://github.com/Monkey-Run/monkey-run.js/blob/master/docs/api.md)
 
-- location.appendParams
-- location.mvcJump
-
-#### geo
-- geo.getDistance
+[HTML Version](https://monkey-run.github.io/monkey-run.js/docs/index.html)
