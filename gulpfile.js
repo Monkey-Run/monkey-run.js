@@ -2,6 +2,15 @@
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var documentation = require('gulp-documentation');
+var rimraf = require('rimraf');
+var pkg = require('./package.json');
+var exec = require('child_process').exec;
+var path = require('path');
+
+gulp.task('clean', function (cb) {
+    rimraf('docs', cb);
+});
 
 gulp.task('concat-js', function () {
     return gulp.src(['src/js/core.js', 'src/js/*.js'])
@@ -16,8 +25,28 @@ gulp.task('min-js', ['concat-js'], function () {
         .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('watch', function () {
-    gulp.watch('src/js/*.js', ['min-js']);
+gulp.task('documentation', ['concat-js', 'clean'], function () {
+    exec(
+        'node ./node_modules/documentation/bin/documentation.js build ' + './src/js' +
+        ' -f html -o ./docs --github --name ' + pkg.name, function (err) {
+            if (err) {
+                console.log(err);
+            }
+            exec(
+                'node ./node_modules/documentation/bin/documentation.js build ' + './src/js' +
+                ' -f md -o ./docs/api.md --github --name ' + pkg.name, function (err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                }
+            );
+        }
+    );
+
 });
 
-gulp.task('default', ['concat-js', 'min-js', 'watch']);
+gulp.task('watch', function () {
+    gulp.watch('src/js/*.js', ['min-js', 'documentation']);
+});
+
+gulp.task('default', ['concat-js', 'min-js', 'documentation', 'watch']);
