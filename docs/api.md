@@ -1,12 +1,12 @@
 # geo
 
-[src/js/geo.js:7-24](https://github.com/Monkey-Run/monkey-run.js/blob/f0444e2ae0c3ad6922f82868fdb2589034341185/src/js/geo.js#L7-L24 "Source code on GitHub")
+[src/js/geo.js:7-24](https://github.com/Monkey-Run/monkey-run.js/blob/96a3a1e1bab37ebc15e7f47e36be82bb6e267c12/src/js/geo.js#L7-L24 "Source code on GitHub")
 
 Functions for Geo
 
 ## getDistance
 
-[src/js/geo.js:17-23](https://github.com/Monkey-Run/monkey-run.js/blob/f0444e2ae0c3ad6922f82868fdb2589034341185/src/js/geo.js#L17-L23 "Source code on GitHub")
+[src/js/geo.js:17-23](https://github.com/Monkey-Run/monkey-run.js/blob/96a3a1e1bab37ebc15e7f47e36be82bb6e267c12/src/js/geo.js#L17-L23 "Source code on GitHub")
 
 Get the distance of two points
 
@@ -21,13 +21,13 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 # location
 
-[src/js/location.js:7-51](https://github.com/Monkey-Run/monkey-run.js/blob/f0444e2ae0c3ad6922f82868fdb2589034341185/src/js/location.js#L7-L51 "Source code on GitHub")
+[src/js/location.js:7-51](https://github.com/Monkey-Run/monkey-run.js/blob/96a3a1e1bab37ebc15e7f47e36be82bb6e267c12/src/js/location.js#L7-L51 "Source code on GitHub")
 
 Functions for Window.location
 
 ## appendParams
 
-[src/js/location.js:15-40](https://github.com/Monkey-Run/monkey-run.js/blob/f0444e2ae0c3ad6922f82868fdb2589034341185/src/js/location.js#L15-L40 "Source code on GitHub")
+[src/js/location.js:15-40](https://github.com/Monkey-Run/monkey-run.js/blob/96a3a1e1bab37ebc15e7f47e36be82bb6e267c12/src/js/location.js#L15-L40 "Source code on GitHub")
 
 Append params to an url
 
@@ -40,7 +40,7 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## mvcJump
 
-[src/js/location.js:48-50](https://github.com/Monkey-Run/monkey-run.js/blob/f0444e2ae0c3ad6922f82868fdb2589034341185/src/js/location.js#L48-L50 "Source code on GitHub")
+[src/js/location.js:48-50](https://github.com/Monkey-Run/monkey-run.js/blob/96a3a1e1bab37ebc15e7f47e36be82bb6e267c12/src/js/location.js#L48-L50 "Source code on GitHub")
 
 Jump to a page using .net mvc
 
