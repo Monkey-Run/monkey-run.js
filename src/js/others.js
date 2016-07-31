@@ -41,7 +41,7 @@
      * @param {Array<Object>} params params to append, each param is an object, eg: {key:'name', value:'Monkey'}
      */
     var mvcJump = function (controller, action, params) {
-        Window.location.href = location.appendParams(Window.location.protocol + '//' + Window.location.host + '/' + controller + '/' + action, params);
+        window.location.href = appendParams(window.location.protocol + '//' + window.location.host + '/' + controller + '/' + action, params);
     };
 
     /**
@@ -55,9 +55,8 @@
          * @returns {Object} result
          */
         get: function (key, needParse) {
-            var storage = window.localStorage;
-            if (key && storage) {
-                var value = storage.getItem(key);
+            if (key && window.localStorage) {
+                var value = window.localStorage.getItem(key);
                 if (needParse) {
                     value = JSON.parse(value);
                 }
@@ -72,12 +71,11 @@
          * @param {Object} value value of the data
          */
         set: function (key, value) {
-            var storage = window.localStorage;
-            if (key && value && storage) {
+            if (key && value && window.localStorage) {
                 if (typeof value !== 'string') {
                     value = JSON.stringify(value);
                 }
-                storage.setItem(key, value);
+                window.localStorage.setItem(key, value);
             }
         },
 
@@ -86,9 +84,8 @@
          * @param {string} key key of the data
          */
         remove: function (key) {
-            var storage = window.localStorage;
-            if (key && storage) {
-                storage.removeItem(key);
+            if (key && window.localStorage) {
+                window.localStorage.removeItem(key);
             }
         }
     };
