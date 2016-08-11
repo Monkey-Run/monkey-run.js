@@ -145,6 +145,7 @@
     };
 
     MonkeyRun.appendParams = appendParams;
+    MonkeyRun.getWxAuthRedirectUrl = getWxAuthRedirectUrl;
     MonkeyRun.mvcJump = mvcJump;
     MonkeyRun.storage = storage;
 
