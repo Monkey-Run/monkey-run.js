@@ -72,6 +72,16 @@
               
                 
                 <li><a
+                  href='#getwxauthredirecturl'
+                  class="">
+                  getWxAuthRedirectUrl
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#storage'
                   class=" toggle-sibling">
                   storage
@@ -127,7 +137,7 @@
       geo
     </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/11ab1b64df8213cf4223c2e58694fc15e94c482e/src/js/geo.js#L7-L24'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/566745df65ef242704c13beeccd6fdb5cb21605c/src/js/geo.js#L7-L24'>
       <span>src/js/geo.js</span>
       </a>
     
@@ -271,7 +281,7 @@
       appendParams
     </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/11ab1b64df8213cf4223c2e58694fc15e94c482e/src/js/others.js#L10-L37'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/566745df65ef242704c13beeccd6fdb5cb21605c/src/js/others.js#L10-L37'>
       <span>src/js/others.js</span>
       </a>
     
@@ -348,7 +358,7 @@
       mvcJump
     </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/11ab1b64df8213cf4223c2e58694fc15e94c482e/src/js/others.js#L45-L47'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/566745df65ef242704c13beeccd6fdb5cb21605c/src/js/others.js#L45-L47'>
       <span>src/js/others.js</span>
       </a>
     
@@ -421,11 +431,96 @@
 
   
   <div class='clearfix'>
+    <h3 class='fl m0' id='getwxauthredirecturl'>
+      getWxAuthRedirectUrl
+    </h3>
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/566745df65ef242704c13beeccd6fdb5cb21605c/src/js/others.js#L56-L59'>
+      <span>src/js/others.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Get Weixin authorize redirect url</p>
+
+
+  <div class='pre p1 fill-light mt0'>getWxAuthRedirectUrl(appid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, scope: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, state: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>appid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code> &#x516C;&#x4F17;&#x53F7;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>url</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code> &#x6388;&#x6743;&#x540E;&#x91CD;&#x5B9A;&#x5411;&#x7684;&#x56DE;&#x8C03;&#x94FE;&#x63A5;&#x5730;&#x5740;&#xFF08;&#x65E0;&#x9700;urlencode&#xFF09;
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>scope</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code> &#x5E94;&#x7528;&#x6388;&#x6743;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;snsapi_base &#xFF08;&#x4E0D;&#x5F39;&#x51FA;&#x6388;&#x6743;&#x9875;&#x9762;&#xFF0C;&#x76F4;&#x63A5;&#x8DF3;&#x8F6C;&#xFF0C;&#x53EA;&#x80FD;&#x83B7;&#x53D6;&#x7528;&#x6237;openid&#xFF09;&#xFF0C;snsapi_userinfo &#xFF08;&#x5F39;&#x51FA;&#x6388;&#x6743;&#x9875;&#x9762;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;openid&#x62FF;&#x5230;&#x6635;&#x79F0;&#x3001;&#x6027;&#x522B;&#x3001;&#x6240;&#x5728;&#x5730;&#x3002;&#x5E76;&#x4E14;&#xFF0C;&#x5373;&#x4F7F;&#x5728;&#x672A;&#x5173;&#x6CE8;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x8981;&#x7528;&#x6237;&#x6388;&#x6743;&#xFF0C;&#x4E5F;&#x80FD;&#x83B7;&#x53D6;&#x5176;&#x4FE1;&#x606F;&#xFF09;
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>state</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code> &#x91CD;&#x5B9A;&#x5411;&#x540E;&#x4F1A;&#x5E26;&#x4E0A;state&#x53C2;&#x6570;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x586B;&#x5199;a-zA-Z0-9&#x7684;&#x53C2;&#x6570;&#x503C;&#xFF0C;&#x6700;&#x591A;128&#x5B57;&#x8282;
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
     <h3 class='fl m0' id='storage'>
       storage
     </h3>
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/11ab1b64df8213cf4223c2e58694fc15e94c482e/src/js/others.js#L52-L93'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/Monkey-Run/monkey-run.js/blob/566745df65ef242704c13beeccd6fdb5cb21605c/src/js/others.js#L64-L105'>
       <span>src/js/others.js</span>
       </a>
     
