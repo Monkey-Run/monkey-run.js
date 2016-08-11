@@ -52,11 +52,33 @@
      * @param {string} url 授权后重定向的回调链接地址（无需urlencode）
      * @param {string} scope 应用授权作用域，snsapi_base （不弹出授权页面，直接跳转，只能获取用户openid），snsapi_userinfo （弹出授权页面，可通过openid拿到昵称、性别、所在地。并且，即使在未关注的情况下，只要用户授权，也能获取其信息）
      * @param {string} state 重定向后会带上state参数，开发者可以填写a-zA-Z0-9的参数值，最多128字节
+     * @returns {string} redirect url
      */
     var getWxAuthRedirectUrl = function (appid, url, scope, state) {
         var result = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + encodeURIComponent(url) + '&response_type=code&scope=' + scope + '&state=' + state + '#wechat_redirect';
         return result;
-    }
+    };
+
+    /**
+     * Get the value of a url param
+     * @param {string} key key of the param
+     * @returns {string} value of the param
+     */
+    var getUrlParamValue = function (key) {
+        var args = {};
+        var query = window.location.search.substring(1);
+        var pairs = query.split('&');
+        for (var i = 0; i < pairs.length; i++) {
+            var pos = pairs[i].indexOf('=');
+            if (pos === -1) {
+                continue;
+            }
+            var argname = pairs[i].substring(0, pos);
+            var value = pairs[i].substring(pos + 1);
+            args[argname] = decodeURIComponent(value);
+        }
+        return args[key];
+    };
 
     /**
      * Storage data using localStorage
@@ -106,6 +128,7 @@
 
     MonkeyRun.appendParams = appendParams;
     MonkeyRun.getWxAuthRedirectUrl = getWxAuthRedirectUrl;
+    MonkeyRun.getUrlParamValue = getUrlParamValue;
     MonkeyRun.mvcJump = mvcJump;
     MonkeyRun.storage = storage;
 
