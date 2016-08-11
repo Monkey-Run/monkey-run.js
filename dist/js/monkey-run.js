@@ -2,7 +2,7 @@
     'use strict';
 
     var monkeyrun = {
-        version: '0.5.0'
+        version: '0.6.0'
     };
 
     Global.MonkeyRun = monkeyrun;
