@@ -55,6 +55,7 @@
     <Compile Include="dist\js\monkey-run.js" />
     <Compile Include="dist\js\monkey-run.min.js" />
     <Compile Include="gulpfile.js" />
+    <Compile Include="src\js\browser.js" />
     <Compile Include="src\js\core.js" />
     <Compile Include="src\js\geo.js" />
     <Compile Include="src\js\others.js" />
