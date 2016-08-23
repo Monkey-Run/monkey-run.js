@@ -4,18 +4,19 @@
     /**
      * Append params to an url
      * @param {string} url source url
-     * @param {Array<Object>} params params to append, each param is an object, eg: {key:'name', value:'Monkey'}
+     * @param {Array<Object>} params params to append, each param is an object, eg: {name:'Monkey', age:'3'}
      * @returns {string} result url
      */
     var appendParams = function (url, params) {
-        if (params && params.length) {
+        if (params) {
             var baseWithSearch = url.split('#')[0];
             var hash = url.split('#')[1];
-            for (var i = 0; i < params.length; i++) {
-                if (params[i].value !== undefined) {
-                    var newParam = params[i].key + "=" + params[i].value;
+            for (var key in params) {
+                var attrValue = params[key];
+                if (attrValue !== undefined) {
+                    var newParam = key + "=" + attrValue;
                     if (baseWithSearch.indexOf('?') > 0) {
-                        var oldParamReg = new RegExp(params[i].key + '=[-%.!~*\'\(\)\\w]*', 'g');
+                        var oldParamReg = new RegExp(key + '=[-%.!~*\'\(\)\\w]*', 'g');
 
                         if (oldParamReg.test(baseWithSearch)) {
                             baseWithSearch = baseWithSearch.replace(oldParamReg, newParam);
@@ -27,6 +28,7 @@
                     }
                 }
             }
+
             if (hash) {
                 url = baseWithSearch + '#' + hash;
             } else {
