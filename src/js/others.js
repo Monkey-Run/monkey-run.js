@@ -75,11 +75,11 @@
             if (pos === -1) {
                 continue;
             }
-            var argname = pairs[i].substring(0, pos);
+            var argname = pairs[i].substring(0, pos).toLowerCase();
             var value = pairs[i].substring(pos + 1);
             args[argname] = decodeURIComponent(value);
         }
-        return args[key];
+        return args[key.toLowerCase()];
     };
 
     /**
