@@ -13,7 +13,7 @@
             var hash = url.split('#')[1];
             for (var key in params) {
                 var attrValue = params[key];
-                if (attrValue !== undefined) {
+                if (attrValue !== undefined && attrValue !== null && attrValue !== '') {
                     var newParam = key + "=" + attrValue;
                     if (baseWithSearch.indexOf('?') > 0) {
                         var oldParamReg = new RegExp(key + '=[-%.!~*\'\(\)\\w]*', 'g');
