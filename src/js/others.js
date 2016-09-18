@@ -2,30 +2,45 @@
     'use strict';
 
     /**
+     * 
+     * @param {Object} value input
+     * @returns {boolean} if input value is null or empty
+     */
+    function isNullOrEmpty(value) {
+        return value === undefined || value === null || value === '';
+    }
+
+    /**
      * Append params to an url
      * @param {string} url source url
-     * @param {Array<Object>} params params to append, each param is an object, eg: {name:'Monkey', age:'3'}
+     * @param {Array<Object>} params params to append, each param is an object, eg: {name:'Monkey', age:'3'}, param will be removed if value is null or empty string.
      * @returns {string} result url
      */
-    var appendParams = function (url, params) {
+    function appendParams(url, params) {
         if (params) {
             var baseWithSearch = url.split('#')[0];
             var hash = url.split('#')[1];
             for (var key in params) {
                 var attrValue = params[key];
-                if (attrValue !== undefined && attrValue !== null && attrValue !== '') {
-                    var newParam = key + "=" + attrValue;
-                    if (baseWithSearch.indexOf('?') > 0) {
-                        var oldParamReg = new RegExp(key + '=[-%.!~*\'\(\)\\w]*', 'g');
+                var newParam = key + "=" + attrValue;
+                if (baseWithSearch.indexOf('?') > 0) {
+                    var oldParamReg = new RegExp(key + '=[-%.!~*\'\(\)\\w]*', 'g');
 
-                        if (oldParamReg.test(baseWithSearch)) {
+                    if (oldParamReg.test(baseWithSearch)) {
+                        if (!isNullOrEmpty(attrValue)) {
                             baseWithSearch = baseWithSearch.replace(oldParamReg, newParam);
-                        } else {
-                            baseWithSearch += "&" + newParam;
+                        }
+                        else {
+                            var removeParamReg = new RegExp('[?&]' + key + '=[-%.!~*\'\(\)\\w]*', 'g');
+                            baseWithSearch = baseWithSearch.replace(removeParamReg, '');
                         }
                     } else {
-                        baseWithSearch += "?" + newParam;
+                        if (!isNullOrEmpty(attrValue)) {
+                            baseWithSearch += "&" + newParam;
+                        }
                     }
+                } else if (!isNullOrEmpty(attrValue)) {
+                    baseWithSearch += "?" + newParam;
                 }
             }
 
@@ -36,7 +51,7 @@
             }
         }
         return url;
-    };
+    }
 
     /**
      * Jump to a page using .net mvc
@@ -44,9 +59,9 @@
      * @param {string} action action name
      * @param {Array<Object>} params params to append, each param is an object, eg: {key:'name', value:'Monkey'}
      */
-    var mvcJump = function (controller, action, params) {
+    function mvcJump(controller, action, params) {
         window.location.href = appendParams(window.location.protocol + '//' + window.location.host + '/' + controller + '/' + action, params);
-    };
+    }
 
     /**
      * Get Weixin authorize redirect url
@@ -56,17 +71,17 @@
      * @param {string} state 重定向后会带上state参数，开发者可以填写a-zA-Z0-9的参数值，最多128字节
      * @returns {string} redirect url
      */
-    var getWxAuthRedirectUrl = function (appid, url, scope, state) {
+    function getWxAuthRedirectUrl(appid, url, scope, state) {
         var result = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + encodeURIComponent(url) + '&response_type=code&scope=' + scope + '&state=' + state + '#wechat_redirect';
         return result;
-    };
+    }
 
     /**
      * Get the value of a url param
      * @param {string} key key of the param
      * @returns {string} value of the param
      */
-    var getUrlParamValue = function (key) {
+    function getUrlParamValue(key) {
         var args = {};
         var query = window.location.search.substring(1);
         var pairs = query.split('&');
@@ -80,7 +95,7 @@
             args[argname] = decodeURIComponent(value);
         }
         return args[key.toLowerCase()];
-    };
+    }
 
     /**
      * Storage data using localStorage
