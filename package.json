@@ -1,11 +1,23 @@
 {
     "name": "monkey-run",
-    "version": "0.7.3",
+    "version": "0.7.4",
     "description": "A useful front-end framework powered by Monkey Run.",
     "author": {
         "name": "HADB",
         "email": "haiandengbin@126.com"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MonkeyRun/monkey-run.js.git"
+    },
+    "keywords": [
+        "monkeyrun",
+        "hadb"
+    ],
+    "bugs": {
+        "url": "https://github.com/MonkeyRun/monkey-run.js/issues"
+    },
+    "license": "MIT",
     "dependencies": {
         "gulp": "^3.9.1",
         "gulp-concat": "^2.6.0",
