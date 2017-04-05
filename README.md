@@ -1,6 +1,8 @@
 MonkeyRun.js
 ======================================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MonkeyRun/monkey-run.js.svg)](https://greenkeeper.io/)
+
 A useful front-end framework powered by Monkey Run.
 
 Documents
