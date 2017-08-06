@@ -18,19 +18,19 @@
 
 ## browser
 
-[src/js/browser.js:8-51](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/browser.js#L8-L51 "Source code on GitHub")
+[src/js/browser.js:8-51](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/browser.js#L8-L51 "Source code on GitHub")
 
 Functions for browser
 
 ## geo
 
-[src/js/geo.js:7-24](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/geo.js#L7-L24 "Source code on GitHub")
+[src/js/geo.js:7-24](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/geo.js#L7-L24 "Source code on GitHub")
 
 Functions for Geo
 
 ### getDistance
 
-[src/js/geo.js:17-23](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/geo.js#L17-L23 "Source code on GitHub")
+[src/js/geo.js:17-23](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/geo.js#L17-L23 "Source code on GitHub")
 
 Get the distance of two points
 
@@ -45,7 +45,7 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## isNullOrEmpty
 
-[src/js/others.js:9-11](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L9-L11 "Source code on GitHub")
+[src/js/others.js:9-11](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L9-L11 "Source code on GitHub")
 
 **Parameters**
 
@@ -55,7 +55,7 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## appendParams
 
-[src/js/others.js:19-53](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L19-L53 "Source code on GitHub")
+[src/js/others.js:19-53](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L19-L53 "Source code on GitHub")
 
 Append params to an url
 
@@ -68,7 +68,7 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## mvcJump
 
-[src/js/others.js:61-63](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L61-L63 "Source code on GitHub")
+[src/js/others.js:61-63](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L61-L63 "Source code on GitHub")
 
 Jump to a page using .net mvc
 
@@ -80,7 +80,7 @@ Jump to a page using .net mvc
 
 ## getWxAuthRedirectUrl
 
-[src/js/others.js:73-76](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L73-L76 "Source code on GitHub")
+[src/js/others.js:73-76](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L73-L76 "Source code on GitHub")
 
 Get Weixin authorize redirect url
 
@@ -95,7 +95,7 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## getUrlParamValue
 
-[src/js/others.js:83-97](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L83-L97 "Source code on GitHub")
+[src/js/others.js:83-97](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L83-L97 "Source code on GitHub")
 
 Get the value of a url param
 
@@ -107,7 +107,7 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## ajax
 
-[src/js/others.js:103-138](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L103-L138 "Source code on GitHub")
+[src/js/others.js:103-137](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L103-L137 "Source code on GitHub")
 
 Ajax
 
@@ -118,13 +118,13 @@ Ajax
 
 ## storage
 
-[src/js/others.js:151-192](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L151-L192 "Source code on GitHub")
+[src/js/others.js:150-191](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L150-L191 "Source code on GitHub")
 
 Storage data using localStorage
 
 ### get
 
-[src/js/others.js:158-167](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L158-L167 "Source code on GitHub")
+[src/js/others.js:157-166](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L157-L166 "Source code on GitHub")
 
 Get data
 
@@ -137,7 +137,7 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ### set
 
-[src/js/others.js:174-181](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L174-L181 "Source code on GitHub")
+[src/js/others.js:173-180](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L173-L180 "Source code on GitHub")
 
 Set data
 
@@ -148,7 +148,7 @@ Set data
 
 ### remove
 
-[src/js/others.js:187-191](https://github.com/MonkeyRun/monkey-run.js/blob/df23f63f9fa989eb95776ea3818c7f0abdc5438b/src/js/others.js#L187-L191 "Source code on GitHub")
+[src/js/others.js:186-190](https://github.com/MonkeyRun/monkey-run.js/blob/bc13ceb5a623f2ce339972671ec310d62bfabb80/src/js/others.js#L186-L190 "Source code on GitHub")
 
 Remove data
 

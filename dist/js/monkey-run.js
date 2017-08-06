@@ -198,47 +198,46 @@
      */
     function ajax(options) {
         options = options || {};
-        options.type = (options.type || "GET").toUpperCase();
-        options.dataType = options.dataType || "json";
-        var params = formatParams(options.data);
-
-        //创建 - 非IE6 - 第一步
+        options.type = (options.type || 'GET').toUpperCase();
+        options.contentType = options.contentType || 'application/json';
         if (window.XMLHttpRequest) {
             var xhr = new XMLHttpRequest();
-        } else { //IE6及其以下版本浏览器
+        } else {
             var xhr = new ActiveXObject('Microsoft.XMLHTTP');
         }
+        xhr.responseType = 'json';
 
-        //接收 - 第三步
         xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4) {
-                var status = xhr.status;
-                if (status >= 200 && status < 300) {
-                    options.success && options.success(xhr.responseText, xhr.responseXML);
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    options.success && options.success(xhr.response);
                 } else {
-                    options.fail && options.fail(status);
+                    options.fail && options.fail(xhr.response);
                 }
             }
         }
 
-        //连接 和 发送 - 第二步
-        if (options.type == "GET") {
-            xhr.open("GET", options.url + "?" + params, true);
+        if (options.type == 'GET') {
+            var url = appendParams(options.url, options.data);
+            xhr.open('GET', url, true);
             xhr.send(null);
-        } else if (options.type == "POST") {
-            xhr.open("POST", options.url, true);
-            //设置表单提交时的内容类型
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.send(params);
+        } else if (options.type === 'POST') {
+            xhr.open('POST', options.url, true);
+            xhr.setRequestHeader('Content-Type', options.contentType);
+            if (options.contentType === 'application/json') {
+                xhr.send(JSON.stringify(options.data));
+            } else {
+                xhr.send(formatFormParams(options.data));
+            }
         }
     }
 
-    function formatParams(data) {
+    function formatFormParams(data) {
         var arr = [];
         for (var name in data) {
-            arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
+            arr.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
         }
-        return arr.join("&");
+        return arr.join('&');
     }
 
     /**
