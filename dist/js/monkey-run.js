@@ -2,7 +2,7 @@
     'use strict';
 
     var monkeyrun = {
-        version: '0.7.5'
+        version: '0.8.0'
     };
 
     Global.MonkeyRun = monkeyrun;
@@ -125,8 +125,7 @@
                     if (oldParamReg.test(baseWithSearch)) {
                         if (!isNullOrEmpty(attrValue)) {
                             baseWithSearch = baseWithSearch.replace(oldParamReg, newParam);
-                        }
-                        else {
+                        } else {
                             var removeParamReg = new RegExp('[?&]' + key + '=[-%.!~*\'\(\)\\w]*', 'g');
                             baseWithSearch = baseWithSearch.replace(removeParamReg, '');
                         }
@@ -174,7 +173,7 @@
 
     /**
      * Get the value of a url param
-     * @param {string} key key of the param
+     * @param {string} key of the param
      * @returns {string} value of the param
      */
     function getUrlParamValue(key) {
@@ -191,6 +190,55 @@
             args[argname] = decodeURIComponent(value);
         }
         return args[key.toLowerCase()];
+    }
+
+    /**
+     * Ajax
+     * @param {options} ajax options
+     */
+    function ajax(options) {
+        options = options || {};
+        options.type = (options.type || "GET").toUpperCase();
+        options.dataType = options.dataType || "json";
+        var params = formatParams(options.data);
+
+        //创建 - 非IE6 - 第一步
+        if (window.XMLHttpRequest) {
+            var xhr = new XMLHttpRequest();
+        } else { //IE6及其以下版本浏览器
+            var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+
+        //接收 - 第三步
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                var status = xhr.status;
+                if (status >= 200 && status < 300) {
+                    options.success && options.success(xhr.responseText, xhr.responseXML);
+                } else {
+                    options.fail && options.fail(status);
+                }
+            }
+        }
+
+        //连接 和 发送 - 第二步
+        if (options.type == "GET") {
+            xhr.open("GET", options.url + "?" + params, true);
+            xhr.send(null);
+        } else if (options.type == "POST") {
+            xhr.open("POST", options.url, true);
+            //设置表单提交时的内容类型
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send(params);
+        }
+    }
+
+    function formatParams(data) {
+        var arr = [];
+        for (var name in data) {
+            arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
+        }
+        return arr.join("&");
     }
 
     /**
@@ -244,5 +292,5 @@
     MonkeyRun.getUrlParamValue = getUrlParamValue;
     MonkeyRun.mvcJump = mvcJump;
     MonkeyRun.storage = storage;
-
-} (MonkeyRun));
+    MonkeyRun.ajax = ajax;
+}(MonkeyRun));
