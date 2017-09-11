@@ -240,6 +240,15 @@
         return arr.join('&');
     }
 
+    MonkeyRun.appendParams = appendParams;
+    MonkeyRun.getWxAuthRedirectUrl = getWxAuthRedirectUrl;
+    MonkeyRun.getUrlParamValue = getUrlParamValue;
+    MonkeyRun.mvcJump = mvcJump;
+    MonkeyRun.ajax = ajax;
+}(MonkeyRun));
+
+(function (MonkeyRun) {
+    'use strict';
     /**
      * Storage data using localStorage
      */
@@ -286,10 +295,5 @@
         }
     };
 
-    MonkeyRun.appendParams = appendParams;
-    MonkeyRun.getWxAuthRedirectUrl = getWxAuthRedirectUrl;
-    MonkeyRun.getUrlParamValue = getUrlParamValue;
-    MonkeyRun.mvcJump = mvcJump;
     MonkeyRun.storage = storage;
-    MonkeyRun.ajax = ajax;
 }(MonkeyRun));
